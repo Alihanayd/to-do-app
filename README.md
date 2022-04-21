@@ -1,6 +1,6 @@
 # # To Do List
 
-The most beautiful to do app in the world (for me)
+The most beautiful to do app in the world (for me),
 It is without the local storage because i couldn't do it 😔
 
 ## Author 😎
