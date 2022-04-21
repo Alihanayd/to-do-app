@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #2f313a;
+}
+.main h1 {
+  color: #3df9b5;
+  margin: 80px 0;
+  font-family: "Quicksand", sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.main {
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: 0 60px;
+}
+.list-element {
+  color: white;
+  list-style-type: none;
+  align-items: center;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  background-color: #2f313a;
+  justify-content: space-between;
+  /* margin-bottom: 30px; */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 5px 7px 2px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+.list-container {
+  display: flex;
+  align-items: center;
+}
+.list-element-text {
+  font-size: 1.2rem;
+  font-family: "Quicksand", sans-serif;
+  text-align: left;
+  /* max-width: 50%; */
+}
+.done {
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  background-color: #3df9b5;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.checked-button {
+  background-color: #fa524c;
+}
+.delete-container {
+  padding: 8px 16px;
+}
+.delete {
+  background-color: #2f313a;
+  border: none;
+  color: #3df9b5;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+#list {
+  display: grid;
+  /* grid-template-columns: auto auto; */
+  gap: 20px;
+  grid-auto-columns: calc(50% - 20px);
+  grid-template-areas: "a a";
+  /* align-items: center; */
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.checked span {
+  text-decoration: line-through;
+  color: rgb(168, 167, 167);
+}
+
+.input-container {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+#input {
+  font-size: 1.5rem;
+  font-family: "Quicksand", sans-serif;
+  justify-content: center;
+  padding: 8px 16px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  border: none;
+  transition: 0.2s all ease-in-out;
+  outline: none;
+}
+#input::placeholder {
+  font-weight: 300;
+}
+#input:focus {
+  box-shadow: 0px 0px 8px 4px rgba(61, 249, 180, 0.5);
+}
+
+.add-button {
+  border-radius: 5px;
+  background: rgba(39, 40, 48, 0.93);
+  /* background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  padding: 15px 20px;
+  /* border: 1px solid #3df9b5; */
+  border: transparent;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  transition: 0.2s all ease-in-out;
+  color: #fff;
+  width: fit-content;
+  letter-spacing: 1.5px;
+}
+.task-text {
+  background: -webkit-linear-gradient(135deg, #00a4cb 12%, #3df9b5 83%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-radius: 5px;
+}
+.button-wrapper {
+  transition: 0.2s background-image ease-in-out;
+  padding: 1px;
+  border-radius: 5px;
+  background-image: none;
+  -webkit-transition: 0.2s background-image ease-in-out;
+}
+.button-wrapper:hover {
+  background-image: linear-gradient(135deg, #00a4cb 12%, #3df9b5 83%);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+.delete i {
+  margin-left: 5px;
+}
+.swal-modal {
+  background-color: #2f313a;
+}
+.swal-title {
+  color: white;
+  font-family: "Quicksand", sans-serif;
+}
+.swal-button {
+  background: -webkit-linear-gradient(135deg, #00a4cb 12%, #3df9b5 83%);
+  border: none;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  box-shadow: none !important;
+}
+@media screen and (max-width: 768px) {
+  #list {
+    grid-template-areas: "a";
+    grid-auto-columns: 100%;
+  }
+}
+@media screen and (max-width: 425px) {
+  .list-element-text {
+    font-size: 14px;
+  }
+  .main h1 {
+    margin: 40px 0;
+  }
+  #input {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-bottom: 15px;
+  }
+  .add-button {
+    font-size: 14px;
+  }
+  .input-container {
+    margin-bottom: 15px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .delete-text {
+    display: none;
+  }
+  @media screen and (max-width: 320px) {
+    .list-element-text {
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/9a462f6574.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <h1>What am I going TO DO?</h1>
+      <div class="input-container">
+        <input type="text" id="input" placeholder="write something to do" />
+        <div class="button-container">
+          <div class="button-wrapper">
+            <div class="add-button" id="add-button" onclick="newItem()">
+              <span class="task-text">ADD TASK</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul id="list"></ul>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
